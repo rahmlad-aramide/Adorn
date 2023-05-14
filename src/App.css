@@ -7,19 +7,19 @@
   /* Track */
   ::-webkit-scrollbar-track {
     border-radius: 100vh;
-    background: #009A4930;
+    background: rgb(120 53 15 / 0.3);
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #009a4999;
+    background: rgb(120 53 15 / 0.5);
     border-radius: 100vh;
     border: 2px solid #edf2f7;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #009A49;
+    background: rgb(120 53 15 / 0.9);
   }
 
   /* hide arrows

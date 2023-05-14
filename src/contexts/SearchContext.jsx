@@ -8,8 +8,11 @@ const SearchProvider = ({children}) => {
     const updateSearchString =(e)=> {
         setSearchStr(e.target.value.toLowerCase())
     }
+    const value = {
+        searchStr, updateSearchString
+    }
     return (
-        <SearchContext.Provider value={{searchStr, updateSearchString}}>
+        <SearchContext.Provider value={value}>
             {children}
         </SearchContext.Provider>
     )

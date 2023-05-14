@@ -1,9 +1,18 @@
 import React from 'react'
-import { Hero } from '../components';
+import { About, Catalog, Categories, Contact, Footer, Hero, NewArrivals, Sales } from '../components';
+
 const Home = () => {
+
   return (
     <>
       <Hero />
+      <Catalog />
+      <Categories />
+      <About />
+      <Sales />
+      <NewArrivals />
+      <Contact />
+      <Footer />
     </>
   )
 }

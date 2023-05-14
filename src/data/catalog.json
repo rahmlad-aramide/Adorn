@@ -1,0 +1,32 @@
+[
+    {
+        "imgUrl": "../assets/images/catalog/chair.png",
+        "name": "Chairs",
+        "url": ""
+    },
+    {
+        "imgUrl": "../assets/images/catalog/table.png",
+        "name": "Tables",
+        "url": ""
+    },
+    {
+        "imgUrl": "../assets/images/catalog/Wardrobe.png",
+        "name": "Wardrobes",
+        "url": ""
+    },
+    {
+        "imgUrl": "../assets/images/catalog/accessories.png",
+        "name": "Accessories",
+        "url": ""
+    },
+    {
+        "imgUrl": "../assets/images/catalog/bed.png",
+        "name": "Beds",
+        "url": ""
+    },
+    {
+        "imgUrl": "../assets/images/catalog/sofa.png",
+        "name": "Sofa",
+        "url": ""
+    }
+]
