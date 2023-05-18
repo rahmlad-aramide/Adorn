@@ -1,21 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import { useContext } from 'react'
 import GroupedProductCard from './GroupedProductCard'
-import { category } from '../data/category'
+import { ProductContext } from '../contexts/ProductContext'
 
 const Categories = props => {
+  const { products } = useContext(ProductContext);
+  const { category } = products[0];
+
   return (
-    <div className='min-h-screen pt-[2.625rem] px-[100px]' id='catalogue'>
+    <div className='bg-white shadow mt-[3.5rem] py-[4.625rem] px-8 md:px-[4.25rem] lg:px-[6.25rem]' id='catalogue'>
       <div className='font-lancelot uppercase pb-6'>
         Shop by category
       </div>
-      <div className='grid grid-cols-2 gap-10'>
-        {category.map((product, index) => (
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+        {category.map((product) => (
           <GroupedProductCard
             imgUrl={product.imgUrl}
             name={product.name}
             url={product.url}
-            index={index}
+            key={product.id}
             others={`justify-start`}
             mt={`mt-5`}
           />
@@ -25,8 +27,5 @@ const Categories = props => {
   )
 }
 
-Categories.propTypes = {
-
-}
 
 export default Categories

@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import arrowRight from './../assets/icons/arrow-right.svg'
 
-const GroupedProductCard = ({ imgUrl, name, url, index, ...others }) => {
+const GroupedProductCard = ({ imgUrl, name, url, id, ...others }) => {
     return (
-        <div key={index} className='flex justify-between flex-col border border-tertiary p-5 relative'>
+        <div className='flex justify-between flex-col border border-tertiary p-5 relative'>
             <div className='flex justify-center min-h-[250px]'>
                 <img src={imgUrl} alt={name} />
             </div>

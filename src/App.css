@@ -7,19 +7,20 @@
   /* Track */
   ::-webkit-scrollbar-track {
     border-radius: 100vh;
-    background: rgb(120 53 15 / 0.3);
+    color: #121212;
+    background: #12121210;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(120 53 15 / 0.5);
+    background: #12121290;
     border-radius: 100vh;
     border: 2px solid #edf2f7;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(120 53 15 / 0.9);
+    background: #121212;
   }
 
   /* hide arrows
@@ -30,6 +31,10 @@ input::-webkit-inner-spin-button {
   margin: 0 !important;
 }
 
+/* Standard */
+input[type=number] {
+  appearance: textfield !important;
+}
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield !important;

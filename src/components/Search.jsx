@@ -13,7 +13,7 @@ const Search = () => {
                 <img src={lens} alt="Lens" />
             </div>
             <div className='hidden md:flex'>
-                <input onChange={updateSearchString} type="search" className='outline-none mx-2 pt-0.5 pb-1' placeholder="Search Adorn" />
+                <input onChange={updateSearchString} type="search" className='outline-none mx-2 pt-0.5 pb-1 mb-[1px]' placeholder="Search Adorn" />
             </div>
             <div className='hidden md:flex justify-center'>
                 <img src={mic} alt="Mic" />

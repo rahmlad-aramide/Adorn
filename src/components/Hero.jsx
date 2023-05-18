@@ -14,7 +14,7 @@ const Hero = () => {
     const filteredUsers = users && users.filter(user => user.name.toLowerCase().includes(searchStr));
 
     return (
-        <section className="h-screen bg-hero bg-cover bg-amber-900/50 bg-center">
+        <section className="h-screen bg-hero bg-cover bg-amber-900/50 bg-center shadow-lg">
             {/* <div className='bg-white text-center pt-20'>
                 {!filteredUsers ? (<div>Loading users...</div>) : filteredUsers.map(user => (<div key={user.id}>{user.name}</div>))}
             </div> */}

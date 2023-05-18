@@ -1,12 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { newArrival, discountBox, heartColor } from "../data/newArrival.js"
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import ShopCard from './SingleProductCard.jsx'
+import SingleProductCard from './SingleProductCard.jsx'
+import { ProductContext } from '../contexts/ProductContext.jsx'
 
 const NewArrivals = props => {
+  const {products} = useContext(ProductContext);
+    const {newArrival} = products[0];
+    const {heartColor, discountBox, productsDetails } = newArrival;
+    // console.log(productsDetails)
   return (
-    <div className='min-h-screen pt-[4.3125rem] pb-[3.125rem] px-[6.25rem]' id='catalogue'>
+    <div className='min-h-screen bg-white shadow mt-[3.5rem] py-[4.625rem] px-8 md:px-[4.25rem] lg:px-[6.25rem]' id='catalogue'>
       <div className='flex justify-between mb-[1.125rem]'>
         <div className='font-lancelot uppercase pb-6'>
           New Arrivals
@@ -15,21 +18,13 @@ const NewArrivals = props => {
           See more
         </Link>
       </div>
-      <div className='grid grid-cols-3 gap-5 gap-y-[3.5rem]'>
-        {newArrival.map((product, index) => (
-          <ShopCard
-            imgUrl={product.imgUrl}
-            name={product.name}
-            url={product.url}
-            index={index}
-            mt={`mt-3`}
-            discount={product.discount}
-            price={product.price}
-            favorite={product.favorite}
-            ratings={product.ratings}
-            stars={product.stars}
-            discountBox={discountBox}
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-5 gap-y-[3.5rem]'>
+        {productsDetails.map((product) => (
+          <SingleProductCard
+            key={product.id}
+            product={product}
             heartColor={heartColor}
+            discountBox={discountBox}
           />
         ))}
       </div>

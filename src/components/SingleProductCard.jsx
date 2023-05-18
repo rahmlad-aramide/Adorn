@@ -1,21 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import {CartContext} from "../contexts/CartContext";
 import Star from './Star';
 
 import heart from './../assets/icons/heart.svg';
 import heartFilled from './../assets/icons/heart-filled.svg';
 import redHeart from './../assets/icons/red-heart.svg';
 import redHeartFilled from './../assets/icons/red-heart-filled.svg';
-
-const SingleProductCard = ({ imgUrl, name, url, index, discount, favorite, price, ratings, stars, discountBox, heartColor, ...others }) => {
+import {notify} from "../App";
+const SingleProductCard = ({ product, discountBox, heartColor }) => { 
+    
+    const {addItemToCart} = useContext(CartContext);
+    const { imgUrl, name, discount, favorite, price, ratings, stars } = product;
     const discountCalc = (realPrice, discountedPrice) => {
         return realPrice - ((discountedPrice / 100) * realPrice)
     }
 
+    const handleAddItemToCart = () => {
+        addItemToCart(product)
+        notify("Item added to cart");
+    }
     return (
-        <div key={index} className='flex justify-between flex-col border border-tertiary p-5 relative font-workSans font-medium text-lg text-primary'>
+        <div className='flex justify-between flex-col border border-tertiary p-5 relative font-workSans font-medium text-lg text-primary'>
             <div className='flex'>
-                {heartColor === "black" 
+                {heartColor === "black"
                     ? <img src={favorite ? heartFilled : heart} alt="Favorite" />
                     : <img src={favorite ? redHeartFilled : redHeart} alt="Favorite" />
                 }
@@ -44,11 +51,11 @@ const SingleProductCard = ({ imgUrl, name, url, index, discount, favorite, price
                 </div>
             </div>
             <div className={`flex justify-center`}>
-                <Link to={url} className={`flex justify-center items-center ${others.mt}`}>
-                    <button className='flex justify-center items-center border px-5 py-3 border-primary'>
+                <div className={`flex justify-center items-center mt-3`}>
+                    <button onClick={handleAddItemToCart} className='flex justify-center items-center border px-5 py-3 border-primary'>
                         Add to cart
                     </button>
-                </Link>
+                </div>
             </div>
         </div>
     )

@@ -4,6 +4,7 @@ import { signInWithGooglePopup, signInUserWithEmailAndPassword } from '../lib/fi
 
 import crossedEye from './../assets/icons/crossed-eye.svg'
 import eye from './../assets/icons/eye.svg';
+import {ToastContainer} from "react-toastify"
 import { warn, notify } from '../App';
 
 
@@ -83,6 +84,7 @@ const SignIn = () => {
     return (
         <>
             <section className="h-screen bg-footer bg-cover bg-black/50 bg-center">
+                <ToastContainer />
                 <div className="flex flex-col md:flex-row justify-start md:justify-center items-center h-screen w-full">
                     <div className="flex order-1 md:order-2 justify-center items-center w-full md:w-[45%] h-fit md:h-full pt-16">
                         <div className='w-[90%] bg-white/50 backdrop-blur-lg my-auto py-10 rounded-xl'>

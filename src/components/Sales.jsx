@@ -1,12 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 import { sale, discountBox, heartColor } from "../data/sale.js"
 import { Link } from 'react-router-dom'
 import SingleProductCard from './SingleProductCard.jsx'
 
-const Sales = props => {
+const Sales = () => {
   return (
-    <div className='min-h-screen pt-[4.3125rem] pb-[3.125rem] px-[6.25rem]' id='catalogue'>
+    <div className='min-h-screen bg-white shadow mt-[3.5rem] py-[4.625rem] px-8 md:px-[4.25rem] lg:px-[6.25rem]' id='catalogue'>
       <div className='flex justify-between mb-[1.125rem]'>
         <div className='font-lancelot uppercase pb-6'>
           On Sale
@@ -15,19 +14,11 @@ const Sales = props => {
           See more
         </Link>
       </div>
-      <div className='grid grid-cols-3 gap-5 gap-y-[3.5rem]'>
-        {sale.map((product, index) => (
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-5 gap-y-[3.5rem]'>
+        {sale.map((product) => (
           <SingleProductCard
-            imgUrl={product.imgUrl}
-            name={product.name}
-            url={product.url}
-            index={index}
-            mt={`mt-3`}
-            discount={product.discount}
-            price={product.price}
-            favorite={product.favorite}
-            ratings={product.ratings}
-            stars={product.stars}
+            key={product.id}
+            product={product}
             discountBox={discountBox}
             heartColor={heartColor}
           />
@@ -35,10 +26,6 @@ const Sales = props => {
       </div>
     </div>
   )
-}
-
-Sales.propTypes = {
-
 }
 
 export default Sales

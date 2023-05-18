@@ -1,10 +1,14 @@
 export {default as About} from './About';
 export {default as Catalog} from './Catalog';
 export {default as Categories} from './Categories';
-export {default as Contact} from './Contact';
+export {default as EmptyCart} from './EmptyCart';
+export {default as FilledCart} from './FilledCart';
+export {default as FilledCartCard} from './FilledCartCard';
 export {default as Footer} from './Footer';
 export {default as Hero} from './Hero';
 export {default as Navbar} from './Navbar';
 export {default as NewArrivals} from './NewArrivals';
 export {default as Sales} from './Sales';
 export {default as Search} from './Search';
+export {default as TopSelling} from './TopSelling';
+export {default as TopSellingCard} from './TopSellingCard';
