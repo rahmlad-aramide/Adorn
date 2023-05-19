@@ -4,24 +4,24 @@ import office from "../assets/images/category/office.jpg";
 import bedroom from "../assets/images/category/bedroom.jpg";
 
 export const category = [
-    {
-        "imgUrl": livingRoom,
-        "name": "Living Room",
-        "url": ""
-    },
-    {
-        "imgUrl": kitchen,
-        "name": "Kitchen",
-        "url": ""
-    },
-    {
-        "imgUrl": office,
-        "name": "Office",
-        "url": ""
-    },
-    {
-        "imgUrl": bedroom,
-        "name": "Bedroom",
-        "url": ""
-    }
-]
+  {
+    imgUrl: livingRoom,
+    name: "Living Room",
+    url: "",
+  },
+  {
+    imgUrl: kitchen,
+    name: "Kitchen",
+    url: "",
+  },
+  {
+    imgUrl: office,
+    name: "Office",
+    url: "",
+  },
+  {
+    imgUrl: bedroom,
+    name: "Bedroom",
+    url: "",
+  },
+];

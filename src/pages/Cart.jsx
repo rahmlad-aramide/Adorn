@@ -1,21 +1,21 @@
-import { useContext } from "react"
-import { EmptyCart, FilledCart, TopSelling } from "../components"
+import { useContext } from "react";
+import { EmptyCart, FilledCart, TopSelling } from "../components";
 import { CartContext } from "../contexts/CartContext";
-import { ToastContainer } from "react-toastify"
+import { ToastContainer } from "react-toastify";
 
 const Cart = () => {
   const { cartItems, cartCount } = useContext(CartContext);
 
   return (
-    <div className='pt-20 bg-tertiary/10 min-h-screen flex flex-col justify-center'>
+    <div className="flex min-h-screen flex-col justify-center bg-tertiary/10 pt-20">
       <ToastContainer />
-      <div className="flex justify-center mt-4">
-        <div className="flex justify-center items-center my-auto w-[90%] max-w-[1140px]">
-          {cartCount === 0 ?
-          <EmptyCart />
-        :
-         <FilledCart cartItems={cartItems} />
-        }
+      <div className="mt-4 flex justify-center">
+        <div className="my-auto flex w-[90%] max-w-[1140px] items-center justify-center">
+          {cartCount === 0 ? (
+            <EmptyCart />
+          ) : (
+            <FilledCart cartItems={cartItems} />
+          )}
         </div>
       </div>
       <div className="flex justify-center">
@@ -24,7 +24,7 @@ const Cart = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

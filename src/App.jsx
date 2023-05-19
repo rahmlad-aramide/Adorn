@@ -1,9 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import { Account, Cart, Error, Home, SignIn, SignUp, Success } from "./pages";
-import { Navbar } from './components'
-import { CartProvider, ProductProvider, SearchProvider, UserProvider } from "./contexts";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Navbar } from "./components";
+import {
+  CartProvider,
+  ProductProvider,
+  SearchProvider,
+  UserProvider,
+} from "./contexts";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const toastParams = {
   position: "top-right",
@@ -21,7 +26,6 @@ export const warn = (val) => toast.error(`${val}`, toastParams);
 export const inform = (val) => toast.info(`${val}`, toastParams);
 
 function App() {
-
   return (
     <SearchProvider>
       <UserProvider>
@@ -48,4 +52,3 @@ function App() {
 }
 
 export default App;
-

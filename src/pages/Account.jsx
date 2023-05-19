@@ -1,12 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Account = () => {
-  return (
-    <div className='pt-20 bg-tertiary/10'>
+  return <div className="bg-tertiary/10 pt-20">Account here</div>;
+};
 
-      Account here
-    </div>
-  )
-}
-
-export default Account
+export default Account;

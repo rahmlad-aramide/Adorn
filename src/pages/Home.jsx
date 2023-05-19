@@ -1,11 +1,18 @@
-import React from 'react'
-import { About, Catalog, Categories, Footer, Hero, NewArrivals, Sales } from '../components';
-import { ToastContainer } from 'react-toastify';
+import React from "react";
+import {
+  About,
+  Catalog,
+  Categories,
+  Footer,
+  Hero,
+  NewArrivals,
+  Sales,
+} from "../components";
+import { ToastContainer } from "react-toastify";
 
 const Home = () => {
-
   return (
-    <div className='bg-tertiary/10'>
+    <div className="bg-tertiary/10">
       <ToastContainer />
       <Hero />
       <Catalog />
@@ -15,7 +22,7 @@ const Home = () => {
       <NewArrivals />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

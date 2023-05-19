@@ -6,34 +6,34 @@ import bed from "../assets/images/catalog/bed.png";
 import sofa from "../assets/images/catalog/sofa.png";
 
 export const catalog = [
-    {
-        "imgUrl": chair,
-        "name": "Chairs",
-        "url": ""
-    },
-    {
-        "imgUrl": table,
-        "name": "Tables",
-        "url": ""
-    },
-    {
-        "imgUrl": wardrobe,
-        "name": "Wardrobes",
-        "url": ""
-    },
-    {
-        "imgUrl": accessories,
-        "name": "Accessories",
-        "url": ""
-    },
-    {
-        "imgUrl": bed,
-        "name": "Beds",
-        "url": ""
-    },
-    {
-        "imgUrl": sofa,
-        "name": "Sofa",
-        "url": ""
-    }
-]
+  {
+    imgUrl: chair,
+    name: "Chairs",
+    url: "",
+  },
+  {
+    imgUrl: table,
+    name: "Tables",
+    url: "",
+  },
+  {
+    imgUrl: wardrobe,
+    name: "Wardrobes",
+    url: "",
+  },
+  {
+    imgUrl: accessories,
+    name: "Accessories",
+    url: "",
+  },
+  {
+    imgUrl: bed,
+    name: "Beds",
+    url: "",
+  },
+  {
+    imgUrl: sofa,
+    name: "Sofa",
+    url: "",
+  },
+];
