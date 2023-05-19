@@ -7,14 +7,17 @@ import heartFilled from './../assets/icons/heart-filled.svg';
 import redHeart from './../assets/icons/red-heart.svg';
 import redHeartFilled from './../assets/icons/red-heart-filled.svg';
 import {notify} from "../App";
+
+export const discountCalc = (realPrice, discountedPrice) => {
+    if(discountedPrice) return realPrice - ((discountedPrice / 100) * realPrice);
+    return realPrice
+}
+
 const SingleProductCard = ({ product, discountBox, heartColor }) => { 
     
     const {addItemToCart} = useContext(CartContext);
     const { imgUrl, name, discount, favorite, price, ratings, stars } = product;
-    const discountCalc = (realPrice, discountedPrice) => {
-        return realPrice - ((discountedPrice / 100) * realPrice)
-    }
-
+    
     const handleAddItemToCart = () => {
         addItemToCart(product)
         notify("Item added to cart");
