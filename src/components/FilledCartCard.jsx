@@ -25,7 +25,7 @@ const FilledCartCard = ({ item }) => {
 
   return (
     <div className="border-light m-4 flex flex-col justify-between border-t">
-      <div className="flex flex-col">
+      <div className="flex flex-col md:flex-row">
         <div className="mt-5 flex flex-col justify-between">
           <div className="mb-3 grid grid-cols-12 gap-4">
             <div className="col-span-4 md:col-span-2 h-fit rounded-lg border p-3">

@@ -84,7 +84,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* Mobile Nav */}
-        <div className={`hidden md:hidden h-screen w-[70%] bg-white absolute top-0 left-0 ${isNavOpen && `-translate-x-full`} transition duration-300`}>
+        <div className={`block md:hidden h-screen w-[70%] bg-white absolute top-0 left-0 ${isNavOpen && `-translate-x-full`} transition duration-300`}>
           <button className="text-4xl font-medium ml-4 mt-1 active:scale-90" onClick={() => setIsNavOpen(!isNavOpen)}>
             &times;
           </button>
