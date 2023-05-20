@@ -95,7 +95,7 @@ const Navbar = () => {
         {/* Mobile Nav */}
         <div
           className={`absolute top-0 left-0 block h-screen w-[70%] bg-white md:hidden ${
-            isNavOpen && `-translate-x-full`
+            !isNavOpen && `-translate-x-full`
           } transition duration-300`}
         >
           <button
