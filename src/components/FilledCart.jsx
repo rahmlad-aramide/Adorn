@@ -10,8 +10,8 @@ const FilledCart = ({ cartItems }) => {
   const { cartCount, totalCount } = useContext(CartContext);
 
   return (
-    <div className="mx-auto grid w-full max-w-[1140px] grid-cols-12 items-center gap-8 py-4 font-workSans">
-      <div className="col-span-9 rounded bg-white shadow">
+    <div className="mx-auto grid w-full max-w-[1140px] grid-cols-12 items-center gap-0 md:gap-8 py-4 font-workSans">
+      <div className="col-span-12 md:col-span-9 rounded bg-white shadow">
         <div className="m-4 mb-2 text-2xl font-medium text-[#121212]">
           Cart ({cartCount})
         </div>
@@ -19,7 +19,7 @@ const FilledCart = ({ cartItems }) => {
           <FilledCartCard key={item.id} item={item} />
         ))}
       </div>
-      <div className="col-span-3 mb-auto rounded bg-white shadow">
+      <div className="col-span-12 md:col-span-3 mb-auto mt-4 md:mt-0 rounded bg-white shadow">
         <div className="m-4 flex flex-col justify-between">
           <div>
             <div className="border-light border-b py-2 text-lg text-[#121212]">

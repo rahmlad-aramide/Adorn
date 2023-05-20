@@ -24,50 +24,73 @@ const FilledCartCard = ({ item }) => {
   };
 
   return (
-    <div className="border-light m-4 flex justify-between border-t">
-      <div className="mt-5 flex flex-col justify-between">
-        <div className="mb-3 grid grid-cols-12 gap-4">
-          <div className="col-span-2 rounded-lg border p-3">
-            <img src={item.imgUrl} alt="" />
-          </div>
-          <div className="col-span-10 flex flex-col justify-center">
-            <div className="text-xl font-medium">{item.name} </div>
-            <div>Category: Chair </div>
-          </div>
-        </div>
-        <button
-          onClick={handleRemoveItem}
-          className="flex items-center rounded-lg px-2 py-1.5 text-lg font-semibold text-secondary hover:bg-secondary/20 active:scale-100"
-        >
-          <img src={bin} alt="Remove" className="mr-2 h-5 text-secondary" />
-          <span>Remove</span>
-        </button>
-      </div>
-      <div className="flex flex-col justify-between text-right">
-        <div className="my-3">
-          <div className="mb-1 text-2xl font-medium">
-            {" "}
-            <s>N</s>
-            {item.discount !== null
-              ? discountCalc(item.price, item.discount)
-              : item.price}
-          </div>
-          {item.discount && (
-            <div className="flex justify-end text-xl">
-              <s>N{item.price}</s>
-              <span className="ml-3 rounded bg-secondary/20 py-0.5 px-1.5 text-center text-sm text-secondary">
-                -{item.discount}%
-              </span>
+    <div className="border-light m-4 flex flex-col justify-between border-t">
+      <div className="flex flex-col">
+        <div className="mt-5 flex flex-col justify-between">
+          <div className="mb-3 grid grid-cols-12 gap-4">
+            <div className="col-span-4 md:col-span-2 h-fit rounded-lg border p-3">
+              <img src={item.imgUrl} alt="" />
             </div>
-          )}
-        </div>
-        <div className="my-2 w-full">
-          <div className="flex">
-            Subtotal: <s className="ml-2">N</s>
-            {formatter.format(
-              discountCalc(item.price, item.discount) * item.quantity
+            <div className="col-span-6 md:col-span-10 flex flex-col justify-center">
+              <div className="text-lg md:text-xl font-medium">{item.name} </div>
+              <div>Category: Chair </div>
+              <div className="my-3 md:hidden">
+            <div className="mb-1 text-lg md:text-2xl font-medium">
+              {" "}
+              <s>N</s>
+              {item.discount !== null
+                ? discountCalc(item.price, item.discount)
+                : item.price}
+            </div>
+            {item.discount && (
+              <div className="flex justify-start md:justify-end text-lg md:text-xl">
+                <s className="">N{item.price}</s>
+                <span className="ml-3 rounded bg-secondary/20 py-0.5 px-1.5 text-center text-sm text-secondary">
+                  -{item.discount}%
+                </span>
+              </div>
             )}
           </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col justify-between text-right">
+          <div className="my-3 hidden md:block">
+            <div className="mb-1 text-2xl font-medium">
+              {" "}
+              <s>N</s>
+              {item.discount !== null
+                ? discountCalc(item.price, item.discount)
+                : item.price}
+            </div>
+            {item.discount && (
+              <div className="flex justify-end text-xl">
+                <s>N{item.price}</s>
+                <span className="ml-3 rounded bg-secondary/20 py-0.5 px-1.5 text-center text-sm text-secondary">
+                  -{item.discount}%
+                </span>
+              </div>
+            )}
+          </div>
+          <div className="my-2 w-full">
+            <div className="flex">
+              Subtotal: <s className="ml-2">N</s>
+              {formatter.format(
+                discountCalc(item.price, item.discount) * item.quantity
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-between">
+        <div>
+          <button
+            onClick={handleRemoveItem}
+            className="flex items-center rounded-lg pl-0 md:px-2 px-2 py-1.5 text-lg font-semibold text-secondary hover:bg-secondary/20 active:scale-100"
+          >
+            <img src={bin} alt="Remove" className="mr-2 h-5 text-secondary" />
+            <span>Remove</span>
+          </button>
         </div>
         <div className="flex justify-end">
           <button

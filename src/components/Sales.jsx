@@ -16,9 +16,9 @@ const Sales = () => {
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-5 gap-y-[3.5rem] md:grid-cols-3">
-        {sale.map((product) => (
+        {sale.map((product, index) => (
           <SingleProductCard
-            key={product.id}
+            key={index}
             product={product}
             discountBox={discountBox}
             heartColor={heartColor}
