@@ -28,29 +28,29 @@ const FilledCartCard = ({ item }) => {
       <div className="flex flex-col md:flex-row">
         <div className="mt-5 flex flex-col justify-between">
           <div className="mb-3 grid grid-cols-12 gap-4">
-            <div className="col-span-4 md:col-span-2 h-fit rounded-lg border p-3">
+            <div className="col-span-4 h-fit rounded-lg border p-3 md:col-span-2">
               <img src={item.imgUrl} alt="" />
             </div>
-            <div className="col-span-6 md:col-span-10 flex flex-col justify-center">
-              <div className="text-lg md:text-xl font-medium">{item.name} </div>
+            <div className="col-span-6 flex flex-col justify-center md:col-span-10">
+              <div className="text-lg font-medium md:text-xl">{item.name} </div>
               <div>Category: Chair </div>
               <div className="my-3 md:hidden">
-            <div className="mb-1 text-lg md:text-2xl font-medium">
-              {" "}
-              <s>N</s>
-              {item.discount !== null
-                ? discountCalc(item.price, item.discount)
-                : item.price}
-            </div>
-            {item.discount && (
-              <div className="flex justify-start md:justify-end text-lg md:text-xl">
-                <s className="">N{item.price}</s>
-                <span className="ml-3 rounded bg-secondary/20 py-0.5 px-1.5 text-center text-sm text-secondary">
-                  -{item.discount}%
-                </span>
+                <div className="mb-1 text-lg font-medium md:text-2xl">
+                  {" "}
+                  <s>N</s>
+                  {item.discount !== null
+                    ? discountCalc(item.price, item.discount)
+                    : item.price}
+                </div>
+                {item.discount && (
+                  <div className="flex justify-start text-lg md:justify-end md:text-xl">
+                    <s className="">N{item.price}</s>
+                    <span className="ml-3 rounded bg-secondary/20 py-0.5 px-1.5 text-center text-sm text-secondary">
+                      -{item.discount}%
+                    </span>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ const FilledCartCard = ({ item }) => {
         <div>
           <button
             onClick={handleRemoveItem}
-            className="flex items-center rounded-lg pl-0 md:px-2 px-2 py-1.5 text-lg font-semibold text-secondary hover:bg-secondary/20 active:scale-100"
+            className="flex items-center rounded-lg px-2 py-1.5 pl-0 text-lg font-semibold text-secondary hover:bg-secondary/20 active:scale-100 md:px-2"
           >
             <img src={bin} alt="Remove" className="mr-2 h-5 text-secondary" />
             <span>Remove</span>
