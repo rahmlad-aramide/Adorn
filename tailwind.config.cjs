@@ -16,18 +16,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        'primary': '#009A49', /* primary green */
-        'secondary': '#ECBB00', /* yellow text */
-        'bgGreen': '#009A4901', /* background green */
-        'lightYellow': '#FFF6DA', /* light yellow */
-        'darkGrey': '#322F2F', /* dark grey */
-        'lightGrey': '#009A491A', /* light grey */
-        'almostWhite': '#F5F5F5', /*almost white */
-        'greyText': '#4A4242', /* grey text*/
-        'iconFindColor': '#308a69', /* icon find color*/
-        'iconRequestColor': '#185e4d', /* icon request color */
-        'iconDeliveryColor': '#077821', /* icon delivery color */
-        'textInputColor': '#F0F8F5', /* text input color */
+        'primary': '#121212', /* dark */
+        'secondary': '#F87979', /* pink */
+        'tertiary': '#555555', /* grey */
       }
     },
   },
