@@ -6,10 +6,10 @@ import { ToastContainer } from "react-toastify";
 const Cart = () => {
   const { cartItems, cartCount } = useContext(CartContext);
   return (
-    <div className="flex min-h-screen flex-col justify-center bg-tertiary/10 pt-20">
+    <div className="flex min-h-screen flex-col justify-center bg-white px-4 pt-20 sm:px-8">
       <ToastContainer />
       <div className="mt-4 flex justify-center">
-        <div className="my-auto flex w-[90%] max-w-[1140px] items-center justify-center">
+        <div className="my-auto mx-auto flex w-full max-w-7xl items-center justify-center">
           {cartCount === 0 ? (
             <EmptyCart />
           ) : (
@@ -17,11 +17,7 @@ const Cart = () => {
           )}
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className=" w-[90%] max-w-[1140px]">
-          <TopSelling />
-        </div>
-      </div>
+      <TopSelling />
     </div>
   );
 };

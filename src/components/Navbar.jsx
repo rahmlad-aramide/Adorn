@@ -50,8 +50,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed z-[9999] flex h-[4.3125rem] w-full items-center bg-white shadow-md">
-        <div className="mx-auto flex w-[90%] max-w-[1140px] items-center justify-between">
+      <div className="fixed z-[9999] flex h-[4.3125rem] w-full items-center bg-white px-4 shadow-md sm:px-4">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
           <div className="flex items-center">
             <button
               onClick={() => {
@@ -64,7 +64,14 @@ const Navbar = () => {
               <div className="mb-[3px] h-[3px] w-5 rounded bg-tertiary"></div>
             </button>
             <div className="font-lancelot text-3xl md:text-5xl">
-              <Link to="/">Adorn</Link>
+              <Link to="/" className="flex items-center">
+                <img
+                  src="https://res.cloudinary.com/dh4rm7b7b/image/upload/w_64,r_max/v1710249074/Adorn/Adorn_logo_xric3y.webp"
+                  alt="Adorn"
+                  className="mr-2 -mt-2 aspect-square w-10"
+                />
+                Adorn
+              </Link>
             </div>
           </div>
           <div className="hidden md:block">
@@ -77,11 +84,13 @@ const Navbar = () => {
                 <div className="text-sm">Account</div>
               </div>
             </Link>
-            <div className="ml-4 hidden cursor-pointer flex-col justify-center transition duration-200 hover:scale-125 active:scale-100 md:ml-[3.9375rem] md:flex">
-              <img src={heart} alt="Favorites" className="h-6" />
-              <div className="text-sm">Favorites</div>
-            </div>
-            <Link to="cart">
+            <Link to="/favorites">
+              <div className="ml-4 hidden cursor-pointer flex-col justify-center transition duration-200 hover:scale-125 active:scale-100 md:ml-[3.9375rem] md:flex">
+                <img src={heart} alt="Favorites" className="h-6" />
+                <div className="text-sm">Favorites</div>
+              </div>
+            </Link>
+            <Link to="/cart">
               <div className="ml-4 flex cursor-pointer flex-col justify-center transition duration-200 hover:scale-125 active:scale-100 md:ml-[3.5187rem]">
                 <img src={cart} alt="Cart" className="h-6" />
                 <div className="text-sm">Cart</div>
@@ -109,14 +118,16 @@ const Navbar = () => {
               <Link to="/">Adorn</Link>
             </div>
             <Search />
-            <div className="mt-3 ml-4 flex cursor-pointer flex-row items-center justify-start transition duration-200 hover:scale-125 active:scale-100 md:ml-[3.9375rem] md:flex-col">
-              <img
-                src={heart}
-                alt="Favorites"
-                className="my-auto mr-3 h-5 md:h-6"
-              />
-              <div className="text-lg md:text-sm">Favorites</div>
-            </div>
+            <Link to="/favorites">
+              <div className="mt-3 ml-4 flex cursor-pointer flex-row items-center justify-start transition duration-200 hover:scale-125 active:scale-100 md:ml-[3.9375rem] md:flex-col">
+                <img
+                  src={heart}
+                  alt="Favorites"
+                  className="my-auto mr-3 h-5 md:h-6"
+                />
+                <div className="text-lg md:text-sm">Favorites</div>
+              </div>
+            </Link>
             <div className="mt-3">
               <SignOutHandler user={user} />
             </div>

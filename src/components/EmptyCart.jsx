@@ -3,7 +3,7 @@ import { HashLink } from "react-router-hash-link";
 
 const EmptyCart = () => {
   return (
-    <div className="mx-auto flex w-full max-w-[1140px] flex-col items-center rounded bg-white py-10 font-workSans shadow">
+    <div className="mx-auto flex w-full max-w-6xl flex-col items-center rounded bg-white py-10 font-workSans">
       <div className="mb-6">
         <img src={cartIcon} alt="Cart" />
       </div>

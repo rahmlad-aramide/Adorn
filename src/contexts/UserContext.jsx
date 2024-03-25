@@ -4,7 +4,6 @@ import {
   onAuthStateChangedListener,
 } from "../lib/firebase/firebase.utils";
 
-// export const UsersContext = createContext();
 export const UserContext = createContext({
   user: null,
   setUser: () => null,
@@ -16,6 +15,9 @@ const UserProvider = ({ children }) => {
     user,
     setUser,
   };
+  // if(sessionStorage.getItem('user')){
+  //   const userSession = sessionStorage.setItem('user', user);
+  // }
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {
       if (user) {

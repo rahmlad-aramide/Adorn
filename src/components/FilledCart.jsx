@@ -10,8 +10,8 @@ const FilledCart = ({ cartItems }) => {
   const { cartCount, totalCount } = useContext(CartContext);
 
   return (
-    <div className="mx-auto grid w-full max-w-[1140px] grid-cols-12 items-center gap-0 py-4 font-workSans md:gap-8">
-      <div className="col-span-12 rounded bg-white shadow md:col-span-9">
+    <div className="mx-auto grid w-full max-w-7xl grid-cols-12 items-center gap-0 py-4 font-workSans md:gap-8">
+      <div className="col-span-12 bg-white shadow md:col-span-9">
         <div className="m-4 mb-2 text-2xl font-medium text-[#121212]">
           Cart ({cartCount})
         </div>
@@ -19,7 +19,7 @@ const FilledCart = ({ cartItems }) => {
           <FilledCartCard key={item.id} item={item} />
         ))}
       </div>
-      <div className="col-span-12 mb-auto mt-4 rounded bg-white shadow md:col-span-3 md:mt-0">
+      <div className="col-span-12 mb-auto mt-4 bg-white shadow md:col-span-3 md:mt-0">
         <div className="m-4 flex flex-col justify-between">
           <div>
             <div className="border-light border-b py-2 text-lg text-[#121212]">
@@ -34,7 +34,7 @@ const FilledCart = ({ cartItems }) => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="mt-8 w-full rounded-lg bg-secondary py-2 px-6 font-bold uppercase text-white transition duration-300 hover:scale-90 active:scale-100">
+            <button className="mt-8 w-full bg-secondary py-2 px-6 font-bold uppercase text-white transition duration-300 hover:scale-90 active:scale-100">
               Checkout
             </button>
           </div>

@@ -1,7 +1,12 @@
 export { default as Account } from "./Account";
+export { default as AboutPage } from "./AboutPage";
 export { default as Cart } from "./Cart";
 export { default as Error } from "./Error";
+export { default as Favorites } from "./Favorites";
 export { default as Success } from "./Success";
 export { default as Home } from "./Home";
+export {default as ProductPage} from './ProductPage';
+export {default as CatalogPage} from './CatalogPage';
+export {default as CategoriesPage} from './CategoriesPage';
 export { default as SignIn } from "./SignIn";
 export { default as SignUp } from "./SignUp";

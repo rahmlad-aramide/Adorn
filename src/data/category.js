@@ -7,21 +7,17 @@ export const category = [
   {
     imgUrl: livingRoom,
     name: "Living Room",
-    url: "",
   },
   {
     imgUrl: kitchen,
     name: "Kitchen",
-    url: "",
   },
   {
     imgUrl: office,
     name: "Office",
-    url: "",
   },
   {
     imgUrl: bedroom,
     name: "Bedroom",
-    url: "",
   },
 ];

@@ -2,6 +2,7 @@ export { default as About } from "./About";
 export { default as Catalog } from "./Catalog";
 export { default as Categories } from "./Categories";
 export { default as EmptyCart } from "./EmptyCart";
+export { default as EmptyFavorites } from "./EmptyFavorites";
 export { default as FilledCart } from "./FilledCart";
 export { default as FilledCartCard } from "./FilledCartCard";
 export { default as Footer } from "./Footer";

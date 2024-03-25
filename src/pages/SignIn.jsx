@@ -21,7 +21,8 @@ const SignIn = () => {
 
   const signInWithGoogle = async () => {
     try {
-      await signInWithGooglePopup();
+      const res = await signInWithGooglePopup();
+      console.log(res)
       notify("Signed in successfully");
     } catch (error) {
       switch (error.code) {
@@ -57,7 +58,8 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await signInUserWithEmailAndPassword(username, password);
+     const res = await signInUserWithEmailAndPassword(username, password);
+     console.log(res);
       notify("Signed in successfully");
       resetFormFields();
     } catch (error) {
